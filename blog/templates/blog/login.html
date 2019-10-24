@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% load bootstrap4 %}
+
+{% block content %}
+    <h2>Login</h2>
+    {% if user.is_authenticated %}
+        <p>You are already registered</p>
+    {% else %}
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form layout='horizontal' %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {% buttons submit="Submit" %} {% endbuttons %}
+    </form>
+   {% endif %}
+{% endblock %}
