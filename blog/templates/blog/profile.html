@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+{{ user.usernarne }}
+{% if user.first_name and user.last_name %}
+    <р>Здравствуйте, {{ user.first_name }} </р>
+{% else %}
+        <h2>Профиль пользователя {{ user.username }} </h2>
+<р>Здравствуйте!</р>
+{% endif %}
+<hЗ>Ваши объявления</hЗ>
+{% endblock %}

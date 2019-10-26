@@ -38,6 +38,13 @@
                       <span class="sr-only">(current)</span>
                     </a>
                   </li>
+                  {% if user.is_authenticated %}
+                    <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'logout' %}">Logout
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  {% else %}
                   <li class="nav-item active">
                     <a class="nav-link" href="{% url 'login' %}">Login
                       <span class="sr-only">(current)</span>
@@ -48,7 +55,7 @@
                       <span class="sr-only">(current)</span>
                     </a>
                   </li>
-
+                  {% endif %}
                 </ul>
               </div>
             </div>
