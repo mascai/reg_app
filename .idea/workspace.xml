@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7ab2676-e2f5-437c-9d6b-c09cd6e91e30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/templates/blog/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/templates/blog/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/activation_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/bad_signature.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/register_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/register_user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/user_is_activated.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/emails/activation_letter_body.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/emails/activation_letter_subject.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/utilities.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myv/bin/pip" beforeDir="false" afterPath="$PROJECT_DIR$/myv/bin/pip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myv/bin/pip3" beforeDir="false" afterPath="$PROJECT_DIR$/myv/bin/pip3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myv/bin/pip3.5" beforeDir="false" afterPath="$PROJECT_DIR$/myv/bin/pip3.5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reg_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/reg_app/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>

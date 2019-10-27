@@ -1,0 +1,3 @@
+Dear user {{ user.username }}
+Click
+{{ host }}{% url 'register_activate' sign=sign %}

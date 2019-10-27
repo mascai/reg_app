@@ -1,0 +1,8 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+{% load bootstrap4 %}
+<h1> User with this name was activated earlier </h1>
+<p> <a href="{% url 'login' %}"> Try to login again. </a> </p>
+
+{% endblock %}
