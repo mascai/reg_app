@@ -8,6 +8,9 @@ from django.views.generic.edit import CreateView
 from django.views.generic.base import TemplateView
 from .utilities import signer
 
+from django.urls import reverse_lazy
+
+
 def post_list(request):
     return render(request, 'blog/post_list.html', {})
 
@@ -26,7 +29,7 @@ class RegisterUserView(CreateView):
     model = AdvUser
     template_name = 'blog/register_user.html'
     form_class = RegisterUserForm
-    success_url = '/register_done'
+    success_url = reverse_lazy('register_done')
 
 class RegisterDoneView(TemplateView):
     template_name = "blog/register_done.html"

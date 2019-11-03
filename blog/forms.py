@@ -8,9 +8,9 @@ from .models import AdvUser
 
 class RegisterUserForm(forms.ModelForm):
     email = forms.EmailField(required=True, label="Email address")
-    password1 = forms.CharField(label="Password", widget=PasswordInput,
+    password1 = forms.CharField(label="Password1", widget=PasswordInput,
                                 help_text=password_validation.password_validators_help_text_html())
-    password2 = forms.CharField(label="Password", widget=PasswordInput,
+    password2 = forms.CharField(label="Password2", widget=PasswordInput,
                                 help_text=password_validation.password_validators_help_text_html())
 
     def clean_password1(self):
@@ -37,7 +37,7 @@ class RegisterUserForm(forms.ModelForm):
         user.is_activated = False
         if commit:
             user.save()
-        user_registrated.send(RegisterUserForm, isinstance=user)
+        user_registrated.send(RegisterUserForm, instance=user)
         return user
 
     class Meta:
