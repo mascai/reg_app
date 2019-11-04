@@ -7,7 +7,7 @@ from .models import AdvUser
 
 
 class RegisterUserForm(forms.ModelForm):
-    email = forms.EmailField(required=True, label="Email address")
+    email = forms.EmailField(required=True, label="Email")
     password1 = forms.CharField(label="Password1", widget=PasswordInput,
                                 help_text=password_validation.password_validators_help_text_html())
     password2 = forms.CharField(label="Password2", widget=PasswordInput,
@@ -42,5 +42,4 @@ class RegisterUserForm(forms.ModelForm):
 
     class Meta:
         model = AdvUser
-        fields = ('username', 'email', 'password', 'password2',
-                  'first_name', 'last_name', 'send_messages')
+        fields = ('username', 'email', 'password1', 'password2', 'send_messages')
