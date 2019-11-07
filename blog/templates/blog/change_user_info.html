@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% load bootstrap4 %}
+
+{% block content %}
+    <h1> Change personal data {{ user.username }} </h1>
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form layout='horizontal' %}
+        {% buttons submit="Submit" %} {% endbuttons %}
+    </form>
+
+{% endblock %}

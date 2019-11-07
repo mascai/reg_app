@@ -2,12 +2,14 @@
 {% block content %}
 
 {% load bootstrap4 %}
-<h1> Registration</h1>
-<form method="post">
-    {% csrf_token %}
-    {% bootstrap_form form layout='horizontal' %}
-    {% buttons submit='Submit' %} {% endbuttons %}
-</form>
+<div class="container" style="margin-top:10px">
+    <h1> Registration</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form layout='horizontal' %}
+        {% buttons submit='Submit' %} {% endbuttons %}
+    </form>
+</div>
 {% endblock %}
 
 

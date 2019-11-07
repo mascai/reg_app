@@ -8,6 +8,15 @@ from django.views.generic.edit import CreateView
 from django.views.generic.base import TemplateView
 from .utilities import signer
 
+from django.views.generic.edit import UpdateView
+from django.contrib.messages.views import SuccessMessageMixin
+from django.urls import reverse_lazy
+from django.shortcuts import get_object_or_404
+
+from .models import AdvUser
+from .forms import ChangeUserInfoForm
+
+
 from django.urls import reverse_lazy
 
 
@@ -49,3 +58,19 @@ def user_activate(request, sign):
         user.is_activated = True
         user.save()
     return render(request, template)
+
+class ChangeUserInfoView(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
+    model = AdvUser
+    template_name = 'blog/change_user_info.html'
+    form_class = ChangeUserInfoForm
+    success_url = reverse_lazy('post_list')
+    success_message = "Personal data have been changed"
+
+    def dispatch(self, request, *args, **kwargs):
+        self.user_id = request.user.pk
+        return super().dispatch(request, *args, **kwargs)
+
+    def get_object(self, queryset=None):
+        if not queryset:
+            queryset = self.get_queryset()
+        return get_object_or_404(queryset, pk=self.user_id)
